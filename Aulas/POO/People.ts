@@ -1,3 +1,5 @@
+//Exemplo de Classe Simples
+
 class Pessoa {
   nome: string;
   idade: number;

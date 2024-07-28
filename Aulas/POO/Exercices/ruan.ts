@@ -1,5 +1,3 @@
-//Faça uma classe para um Animal, com os atributos nome e idade e um método que retorna o som que o animal faz.
-
 //faça uma classe funcionario com um método aumentar salario e mostrar salaraio;
 
 class Funcionario {
