@@ -31,6 +31,7 @@ class Exemplo {
   }
 }
 
+
 const exemplo1 = new Exemplo("string", 1, true, ["string", "string"]);
 
 console.log(exemplo1);
