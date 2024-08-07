@@ -1,27 +1,22 @@
 abstract class Animal {
-  abstract name: string;
-  abstract emitirSom(): void;
+  name: string;
+
+  emitirSom(): void {
+    console.log("fazendo som");
+  }
 
   mover(): void {
     console.log("O animal está se movendo");
   }
 }
 
-class Cachorro extends Animal {
-  name: string;
-  emitirSom(): void {
-    console.log("O cachorro late");
-  }
-}
+class Cachorro extends Animal {}
 
-class Gato extends Animal {
-  name: string;
-  emitirSom(): void {
-    console.log("O gato mia");
-  }
-}
+class Gato extends Animal {}
 
 const cachorro = new Cachorro();
+
+
 cachorro.emitirSom();
 cachorro.mover();
 

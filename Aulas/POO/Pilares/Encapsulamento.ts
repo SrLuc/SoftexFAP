@@ -1,30 +1,40 @@
 class Pessoa {
-    private nome: string;
-    private idade: number;
+  public nome: string;
+  public idade: number;
 
-    constructor(nome: string, idade: number) {
-        this.nome = nome;
-        this.idade = idade;
-    }
+  constructor(nome: string, idade: number) {
+    this.nome = nome;
+    this.idade = idade;
+  }
 
-    public getNome(): string {
-        return this.nome;
-    }
+  public getNome(): string {
+    return this.nome;
+  }
 
-    public setNome(nome: string): void {
-        this.nome = nome;
-    }
+  public getIdade(): number {
+    return this.idade;
+  }
 
-    public getIdade(): number {
-        return this.idade;
-    }
+  private setNome(nome: string): void {
+    this.nome = nome;
+  }
 
-    public setIdade(idade: number): void {
-        this.idade = idade;
-    }
+  private setIdade(idade: number): number {
+    return (this.idade = idade);
+  }
+
+  public changeName(novoNome: string): void {
+    return this.setNome(novoNome);
+  }
+
+  public changeIdade(novaIdade: number): number {
+    return this.setIdade(novaIdade);
+  }
 }
 
-const pessoa = new Pessoa('João', 30);
-console.log(pessoa.getNome()); 
-pessoa.setNome('Maria');
-console.log(pessoa.getNome()); 
+const pessoa = new Pessoa("João", 30);
+
+pessoa.nome = "Ruan";
+console.log(pessoa.idade);
+console.log(pessoa.changeName("Rinaldo"));
+console.log(pessoa.changeIdade(45));
